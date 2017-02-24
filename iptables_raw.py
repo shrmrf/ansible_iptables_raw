@@ -346,12 +346,12 @@ class Iptables:
             if self._is_debian():
                 return '/etc/iptables/rules.v4'
             else:
-                return '/etc/sysconfig/iptables'
+                return '/usr/share/iptables-settings/iptables.rules'
         else:
             if self._is_debian():
                 return '/etc/iptables/rules.v6'
             else:
-                return '/etc/sysconfig/ip6tables'
+                return '/usr/share/iptables-settings/ip6tables.rules'
 
     # Return path to json state file.
     def _get_state_save_path(self, ipversion):
